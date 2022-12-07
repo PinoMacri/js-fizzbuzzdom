@@ -7,52 +7,52 @@
 //~---------------------------------------------------------------------------------------
 
 //! - STEP SVILUPPO -
-//** 0 - CONTROLLARE STEP BY STEP AVVENUTO AGGANCIO TRAMITE CONSOLE
-//** 1 - Apriamo il Ciclo
-//** 2 - Assegniamo la Variabile da riutilizzare al cambiare dei multipli
-//** 3 - Calcolare i multipli sia di 3 che di 5
-//** 4 - Calcolare i multipli solo di 3
-//** 5 - Calcolare i multipli solo di 5
-//** 6 - Specificare tutti gli altri numeri
-//** 7 - Controllo finale in console
+//** 1 - Creazione DIV titolo
+//** 2 - Apriamo il Ciclo
+//** 3 - Creazione DIV stampati
+//** 4 - Assegniamo la Variabile da riutilizzare al cambiare dei multipli
+//** 5 - Calcolare i multipli sia di 3 che di 5
+//** 6 - Calcolare i multipli solo di 3
+//** 7 - Calcolare i multipli solo di 5
+//** 8 - Specificare tutti gli altri numeri
 
 //~---------------------------------------------------------------------------------------
 //! - SVOLGIMENTO -
+//* 1 - Creazione DIV titolo
     const title = document.createElement ("div")
     title.innerText = "FizzBuzzDom"
     contenitore.appendChild (title)
     title.classList ="titolo"
-//^ 1 - CICLO
+//^ 2 - CICLO
 for (let i = 1; i <= 100; i++)
 {
+    //* 3 - Creazione DIV stampati
     const contenitore = document.getElementById ("contenitore")
     const divResult = document.createElement("div")
     contenitore.append (divResult)
-    //** 2 - ASSEGNAZIONE VARIABILE DA RIASSEGNARE*/
+    //** 4 - ASSEGNAZIONE VARIABILE DA RIASSEGNARE AL CAMBIARE DEI MULTIPLI*/
     let result;
-    //* 3 - SE HO MULTIPLI DI 3 E DI 5*/
+    //* 5 - SE HO MULTIPLI DI 3 E DI 5*/
     if ((i % 3 == 0) && (i % 5 == 0)) {
     result = "FizzBuzz";
     divResult.innerText = result
     divResult.classList ="normalNumber styleFizzBuzz"
-    //* 4 - SE ALTRIMENTI HO SOLO MULTIPLI DI 3*/
+    //* 6 - SE ALTRIMENTI HO SOLO MULTIPLI DI 3*/
     } else if (i % 3 == 0) {
     result = "Fizz";
     divResult.innerText = result
     divResult.classList ="normalNumber styleFizz"
-    //* 5 - SE ALTRIMENTI HO SOLO MULTIPLI DI 5*/
+    //* 7 - SE ALTRIMENTI HO SOLO MULTIPLI DI 5*/
     } else if (i % 5 == 0) {
     result = "Buzz";
     divResult.innerText = result
     divResult.classList ="normalNumber styleBuzz"
-    //* 6 - ALTRIMENTI TUTTI GLI ALTRI NUMERI*/
+    //* 8 - ALTRIMENTI TUTTI GLI ALTRI NUMERI*/
     } else {
     result = i;
     divResult.innerText = result
     divResult.classList ="normalNumber styleNormalNumber"
     }
-    //! 7 - CONTROLLO E STAMPA FINALE
-    console.log(result);
 }
 
 
