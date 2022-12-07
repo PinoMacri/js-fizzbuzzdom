@@ -1,0 +1,35 @@
+body {
+    background-image: url('../img/1358734.jpg');
+}
+.normalNumber {
+    width: 20%;
+    height: 190px;
+    text-align: center;
+    line-height: 190px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+.styleNormalNumber {
+    background-image: linear-gradient(to right, goldenrod , violet);
+}
+.styleFizz {
+    background-image: linear-gradient(blue , red);
+    color: white;
+}
+.styleBuzz {
+    background-image: linear-gradient(goldenrod , green);
+    color: white;
+}
+.styleFizzBuzz {
+    background-image: linear-gradient(goldenrod , green , black , red );
+    color: white;
+}
+.titolo {
+    width: 100%;
+    font-size: 80px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
